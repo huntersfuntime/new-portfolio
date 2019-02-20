@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 
 import PortfolioItem from './portfolio-item';
 
@@ -8,17 +9,37 @@ export default class PortfolioContainer extends Component {
     this.state = {
       pageTitle: 'Welcome to my portfolio',
       isLoading: false,
-      data: [
-        { title: 'Flights From Home', category: 'eCommerce', slug: 'flights-from-home' },
-        { title: 'Dawson Community College', category: 'Teaching', slug: 'dawson-community-college' },
-        { title: 'Easy Storage Solutions', category: 'Enterprise', slug: 'easy-storage-solutions' }
-      ]
+      data: []
     }
+
+  }
+
+  getPortfolioItems() {
+    axios.get('https://huntersfuntime.devcamp.space/portfolio/portfolio_items')
+    .then(response => {
+      this.setState({
+        data: response.data.portfolio_items
+      })
+    })
+    .catch(error => {
+      console.log(error);
+    });
   }
 
   portfolioItems() {
+    // Data that we'll need
+    // - background image
+    // - logo
+    // - description
+    // - id
     return this.state.data.map(item => {
-      return <PortfolioItem title={item.title} url={'google.com'} slug={item.slug} />
+      return (
+      <PortfolioItem 
+        key={item.id} 
+        title={item.name} 
+        url={item.url} 
+        slug={item.id} />
+      )
     })
   }
 
@@ -28,6 +49,10 @@ export default class PortfolioContainer extends Component {
         return item.category === filter;
       })
     })
+  }
+
+  componentDidMount () {
+    this.getPortfolioItems();
   }
 
   render() {
