@@ -1,5 +1,10 @@
-# React/Redux/Router Starter Project
+Portfolio website built using React.
 
-> Provided for the students of the [Bottega Code School](https://bottega.tech/)
+#TODO
+Currently the Blog API endpoint is not working. Need to go remove fake data, and update to bring in actual blog posts. []
 
-*Fork from [es6-webpack2-starter](https://github.com/micooz/es6-webpack2-starter)*# new-portfolio
+Put in accurate Portfolio []
+
+Update About Me Section []
+
+Style the Home Page []
