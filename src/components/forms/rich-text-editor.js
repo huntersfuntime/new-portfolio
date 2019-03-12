@@ -8,9 +8,21 @@ export default class RichTextEditor extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      EditorState: EditorState.createEmpty()
+      editorState: EditorState.createEmpty()
     }
+
+    this.onEditorStateChange = this.onEditorStateChange.bind(this);
   }
+
+  onEditorStateChange(editorState) {
+    this.setState(
+      { editorState }, 
+      this.props.handleRichTextEditorChange(
+        draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))
+      )
+      );
+    
+  } // since setState is aysnc. This will be a safeguard.
 
   render() {
     return (
@@ -19,6 +31,7 @@ export default class RichTextEditor extends Component {
           editorState={this.state.editorState}
           wrapperClassName='demo-wrapper'
           editorClassName='demo-editor'
+          onEditorStateChange={this.onEditorStateChange}
         />
       </div>
     )
