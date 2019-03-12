@@ -58,7 +58,7 @@ class Blog extends Component {
       currentPage: this.state.currentPage + 1
     });
     
-    axios.get(`https://jordan.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, 
+    axios.get(`https://huntersfuntime.devcamp.space/portfolio/portfolio_blogs?page=${this.state.currentPage}`, 
     { withCredentials: true }
     ).then(response => {
       this.setState({
