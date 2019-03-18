@@ -7,7 +7,8 @@ import {
   faSpinner,
   faPlusCircle,
   faEnvelope,
-  faMapMarkedAlt
+  faMapMarkedAlt,
+  faLock
 } from "@fortawesome/free-solid-svg-icons";
 
 const Icons = () => {
@@ -18,7 +19,8 @@ const Icons = () => {
     faSpinner,
     faPlusCircle,
     faEnvelope,
-    faMapMarkedAlt
+    faMapMarkedAlt,
+    faLock
   );
 };
 
