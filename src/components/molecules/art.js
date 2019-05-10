@@ -2,8 +2,7 @@ import React from "react";
 
 const ArtComponent = () => {
   return (
-    <React.Fragment>
-      Fine Art
+    <div className="art-container">
       <div className="horse">
         <div className="saddle" />
         <div className="belly" />
@@ -35,7 +34,7 @@ const ArtComponent = () => {
         </div>
       </div>
       <div className="water" />
-    </React.Fragment>
+    </div>
   );
 };
 
