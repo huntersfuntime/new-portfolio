@@ -8,3 +8,6 @@ Put in accurate Portfolio []
 Update About Me Section []
 
 Style the Home Page []
+
+Refactor Delete Image []
+
