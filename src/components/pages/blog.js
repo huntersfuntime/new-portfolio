@@ -136,7 +136,7 @@ class Blog extends Component {
             this.handleSuccessfullNewBlogSubmission
           }
         />
-        {this.props.loggedInStatus !== "LOGGED_IN" ? (
+        {this.props.loggedInStatus === "LOGGED_IN" ? (
           <div className="new-blog-link">
             <a onClick={this.handleNewBlogClick}>
               <FontAwesomeIcon icon="plus-circle" />
