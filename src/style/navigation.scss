@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   padding: 3rem;
-  background-color: $background-color;
 
   .right-side {
     a {
@@ -46,5 +45,21 @@
       border-bottom: 1px solid $teal;
       color: $teal;
     }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .left-side {
+    flex-direction: column;
+    position: absolute;
+  }
+  .nav-link-wrapper {
+    margin-bottom: 2rem;
+    padding: 8px;
+    z-index: 5;
+    background-color: $body-color;
+  }
+  .right-side {
+    opacity: 0;
   }
 }
