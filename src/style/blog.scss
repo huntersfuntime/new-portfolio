@@ -1,5 +1,6 @@
 .blog-container {
   display: flex;
+  background-color: white;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -42,13 +43,20 @@
     a {
       cursor: pointer;
       text-decoration: none;
-      color: $teal;
+      color: black;
       transition: 0.5s ease-in-out;
 
       &:hover {
-        color: $dark-teal;
+        color: $teal;
       }
     }
+  }
+
+  .blog-item {
+    margin: 1rem;
+    box-shadow: 0 2px 4px hsla(0, 0%, 59%, 0.355);
+    padding: 2rem;
+    width: 80rem;
   }
 
   .featured-image-wrapper {
@@ -59,5 +67,20 @@
       border-radius: 5px;
       object-fit: cover;
     }
+  }
+}
+
+.blog-banner {
+  text-align: center;
+  height: 20vh;
+  font-size: 6rem;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 1400px) {
+  .blog-banner {
+    font-size: 3rem;
+    margin-top: 15rem;
+    opacity: 0;
   }
 }

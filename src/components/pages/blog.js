@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import BlogItem from "../blog/blog-item";
 import BlogModal from "../modals/blog-modal";
+import BlogBanner from "../blog/blog-banner";
 
 class Blog extends Component {
   constructor() {
@@ -128,28 +129,31 @@ class Blog extends Component {
       }
     });
     return (
-      <div className="blog-container">
-        <BlogModal
-          modalIsOpen={this.state.blogModalIsOpen}
-          handleModalClose={this.handleModalClose}
-          handleSuccessfullNewBlogSubmission={
-            this.handleSuccessfullNewBlogSubmission
-          }
-        />
-        {this.props.loggedInStatus === "LOGGED_IN" ? (
-          <div className="new-blog-link">
-            <a onClick={this.handleNewBlogClick}>
-              <FontAwesomeIcon icon="plus-circle" />
-            </a>
-          </div>
-        ) : null}
-        <div className="content-container">{blogRecords}</div>
-        {this.state.isLoading ? (
-          <div className="content-loader">
-            <FontAwesomeIcon icon="spinner" spin />
-          </div>
-        ) : null}
-      </div>
+      <React.Fragment>
+        <BlogBanner />
+        <div className="blog-container">
+          <BlogModal
+            modalIsOpen={this.state.blogModalIsOpen}
+            handleModalClose={this.handleModalClose}
+            handleSuccessfullNewBlogSubmission={
+              this.handleSuccessfullNewBlogSubmission
+            }
+          />
+          {this.props.loggedInStatus === "LOGGED_IN" ? (
+            <div className="new-blog-link">
+              <a onClick={this.handleNewBlogClick}>
+                <FontAwesomeIcon icon="plus-circle" />
+              </a>
+            </div>
+          ) : null}
+          <div className="content-container">{blogRecords}</div>
+          {this.state.isLoading ? (
+            <div className="content-loader">
+              <FontAwesomeIcon icon="spinner" spin />
+            </div>
+          ) : null}
+        </div>
+      </React.Fragment>
     );
   }
 }

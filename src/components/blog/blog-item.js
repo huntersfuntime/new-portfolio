@@ -13,7 +13,7 @@ const BlogItem = props => {
   } = props.blogItem;
 
   return (
-    <div>
+    <div className="blog-item">
       <Link to={`/b/${id}`}>
         <h1>{title}</h1>
       </Link>
