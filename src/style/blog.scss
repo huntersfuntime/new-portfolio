@@ -1,6 +1,5 @@
 .blog-container {
   display: flex;
-  background-color: white;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -38,7 +37,8 @@
   .content-container {
     display: flex;
     flex-direction: column;
-    width: 80rem;
+
+    margin-bottom: 10rem;
 
     a {
       cursor: pointer;
@@ -54,9 +54,18 @@
 
   .blog-item {
     margin: 1rem;
+    background-color: $offwhite;
     box-shadow: 0 2px 4px hsla(0, 0%, 59%, 0.355);
-    padding: 2rem;
     width: 80rem;
+
+    h1 {
+      padding-left: 3rem;
+      text-decoration: underline;
+    }
+
+    .blog-content {
+      transform: translate(3rem, -3rem);
+    }
   }
 
   .featured-image-wrapper {
@@ -71,10 +80,14 @@
 }
 
 .blog-banner {
-  text-align: center;
+  font-size: 3rem;
   height: 20vh;
-  font-size: 6rem;
   width: 100vw;
+
+  blockquote {
+    text-align: center;
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
