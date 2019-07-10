@@ -4,7 +4,8 @@ const BlogBanner = () => {
   return (
     <div className="blog-banner">
       <blockquote>
-        “Yesterday's weirdness is tomorrow's reason why.” - Hunter S Thompson
+        “That’s my only goal. Surround myself with funny people, and make sure
+        everyone has a good time and works hard.” - Joe Rogan
       </blockquote>
     </div>
   );

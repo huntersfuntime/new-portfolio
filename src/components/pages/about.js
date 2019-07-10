@@ -15,15 +15,14 @@ export default function() {
         {" "}
       </div>
       <div className="right-column">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        <p className="about-me">
+          Developing clean, elegant, code to solve complex real-world problems
+          is what I live for. I love to tackle new challenges that push me to
+          learn something new, even if it is just to refactor a piece of old
+          code. I have experience working in both front-end and back-end
+          development. I’m currently looking for a company that has a product I
+          can get excited about, as well as contribute to my growth.
+        </p>
       </div>
     </div>
   );
