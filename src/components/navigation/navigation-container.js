@@ -58,7 +58,7 @@ const NavigationComponent = props => {
           : null}
       </div>
       <div className="right-side">
-        HUNTER ORGES (Orjes)
+        Hunter Orges (Orjes)
         {props.loggedInStatus === "LOGGED_IN" ? (
           <a onClick={handleSignOut}>
             <FontAwesomeIcon icon="sign-out-alt" />
