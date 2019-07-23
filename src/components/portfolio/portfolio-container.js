@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import PortfolioItem from "./portfolio-item";
+import Header from "./header";
 
 export default class PortfolioContainer extends Component {
   constructor() {
@@ -58,7 +59,8 @@ export default class PortfolioContainer extends Component {
     }
     return (
       <div className="homepage-wrapper">
-        <div className="filter-links">
+        <Header />
+        {/* <div className="filter-links">
           <button
             className="btn"
             onClick={() => this.handleFilter("Higher Education")}
@@ -83,7 +85,7 @@ export default class PortfolioContainer extends Component {
           >
             All
           </button>
-        </div>
+        </div> */}
         <div className="portfolio-items-wrapper">{this.portfolioItems()}</div>
       </div>
     );

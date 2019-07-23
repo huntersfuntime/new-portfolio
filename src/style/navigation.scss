@@ -1,7 +1,6 @@
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 6rem;
   font-size: 2rem;
 
   .right-side {
@@ -29,35 +28,37 @@
     text-transform: lowercase;
 
     a {
-      color: #222;
+      color: #999999;
       text-decoration: none;
 
       &:hover {
-        color: $grey;
+        color: black;
       }
     }
 
     &:hover {
-      border-bottom: 1px solid $grey;
+      border-bottom: 1px solid black;
     }
 
     .nav-link-active {
-      border-bottom: 1px solid $teal;
-      color: $teal;
+      border-bottom: 1px solid black;
+      color: black;
     }
   }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 600px) {
   .left-side {
     flex-direction: column;
     position: absolute;
+    top: 0;
+    left: 10px;
   }
   .nav-link-wrapper {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 8px;
     z-index: 5;
-    background-color: $body-color;
+    background-color: white;
   }
   .right-side {
     opacity: 0;
